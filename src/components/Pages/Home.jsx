@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import { useContext } from "react";
 import PostsContext from "../../contexts/PostsContext";
-import UsersContext from "../../contexts/UsersContext";
-import Post from "../Molecules/Post";
 
 const StyledHome = styled.main`
   h1{
@@ -46,13 +44,13 @@ const Home = () => {
             <h1>POSTS</h1>
             <div className="korteles">
                 {
-                    posts.map(post =>
-                        <Post
-                        key={post.id}
-                        data={post}
-                        />
-                    )
-                }
+                posts.map((post) => (
+                <div key={post.id}>
+                <h2>{post.name}</h2>
+                <img src={post.image} alt={post.name} />
+                <p>{post.description}</p>
+            </div>
+      ))}
             </div>
         </StyledHome>
      );

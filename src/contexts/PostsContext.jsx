@@ -1,45 +1,48 @@
-import { createContext, useReducer, useEffect, useState } from "react";
-import { act } from "react-dom/test-utils";
+import { createContext, useReducer, useEffect } from "react";
 
 const PostsContext = createContext();
-const PostsContextTypes = {
-    get: 'get_all_posts'
+
+const PostsActionTypes = {
+  get: 'get_all_posts',
+  add: 'add_post' 
 };
 
-const reducer = (state, action) =>{
-    switch(action.type){
-        case PostsContextTypes.get:
-            return action.data;
-        default:
-            return state;
-    }
-}
+const reducer = (state, action) => {
+  switch (action.type) {
+    case PostsActionTypes.get:
+      return action.data;
+    case PostsActionTypes.add: 
+      return [...state, action.data];
+    default:
+      return state;
+  }
+};
 
 const PostsProvider = ({ children }) => {
+  const [posts, setPosts] = useReducer(reducer, []);
 
-    const [posts, setPosts] = useReducer(reducer, []);
+  useEffect(()=>{
+    fetch(`http://localhost:8080/posts`)
+      .then(res => res.json())
+      .then(data => setPosts({
+        type: PostsActionTypes.get,
+        data: data
+      }));
+  }, []);
 
-    useEffect(() => {
-        fetch(`http://localhost:8080/posts`)
-        .then(res => res.json())
-        .then(data => setPosts({
-            type: PostsContextTypes.get,
-            data:data
-        }))
-    }, []);
 
-    return ( 
-        <PostsContext.Provider
-            value={{
-                posts,
-                setPosts,
-                PostsContextTypes
-            }}
-        >
-            { children }
-        </PostsContext.Provider>
-     );
-}
- 
+  return (
+    <PostsContext.Provider
+      value={{
+        posts,
+        setPosts,
+        PostsActionTypes
+      }}
+    >
+      {children}
+    </PostsContext.Provider>
+  );
+};
+
 export { PostsProvider };
 export default PostsContext;

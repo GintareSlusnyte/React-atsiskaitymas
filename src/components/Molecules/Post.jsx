@@ -6,7 +6,7 @@ import styled from "styled-components";
 
 const Post = ({ data }) => {
 
-    const { setPosts, PostsActionTypes} = useContext(PostsContext);
+    // const { setPosts, PostsActionTypes} = useContext(PostsContext);
     return ( 
         <div>
             <h1>{data.name}</h1>
