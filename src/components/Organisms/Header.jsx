@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 const StyledHeader = styled.header`
+    border-bottom: 2px solid black;
     >nav{
         display: flex;
         justify-content: space-between;
@@ -23,7 +24,7 @@ const Header = () => {
                 <div>
                     <ul>
                         <li><NavLink>Login</NavLink></li>
-                        <li><NavLink>Register</NavLink></li>
+                        <li><NavLink to="/">Register</NavLink></li>
                         <li><NavLink>Home</NavLink></li>
                         <li><NavLink>Add</NavLink></li>
                         <li><NavLink>Logout</NavLink></li>
