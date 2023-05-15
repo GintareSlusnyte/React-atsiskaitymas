@@ -6,6 +6,7 @@ import Post from "../Molecules/Post";
 
 const StyledHome = styled.main`
   h1{
+    font-size: 1.7rem;
     text-align: center;
   }
   .korteles{
@@ -21,14 +22,14 @@ const StyledHome = styled.main`
     }
     >div{
         box-shadow: 0 0 1px;
-        height: 650px;
+        height: 550px;
         width: 250px;
         >img{
             width: 100%;
-            height: 60%;
+            height: 50%;
         }
         p{
-            font-size: 15px;
+            font-size: 14px;
             padding-inline: 10px;
         }
     }

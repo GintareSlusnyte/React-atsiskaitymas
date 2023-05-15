@@ -6,10 +6,10 @@ import styled from 'styled-components';
 const StyledFooter = styled.footer`
     padding: 20px 50px;
     border-top: 2px solid black;
-    height: 100px;
+    height: 80px;
     .copyright{
         font-weight: 400;
-        font-size: 13px;
+        font-size: 11px;
     }
 
 `;

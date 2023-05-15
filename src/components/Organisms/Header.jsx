@@ -6,10 +6,10 @@ const StyledHeader = styled.header`
     >nav{
         display: flex;
         justify-content: space-between;
-        height: 100px;
+        height: 90px;
     }
     .logo > a > img{
-        height: 100px;
+        height: 90px;
     }
 
 `;

@@ -6,7 +6,7 @@ import UsersContext from "../../contexts/UsersContext";
 import { compareSync } from 'bcryptjs';
 
 const StledMain = styled.main`
-    height: calc(100vh - 250px);
+    height: 650px;
 
 h1{
   text-align: center;
