@@ -47,7 +47,10 @@ const Home = () => {
                 posts.map((post) => (
                 <div key={post.id}>
                 <h2>{post.name}</h2>
-                <img src={post.image} alt={post.name} />
+                <img 
+                    src={post.image} 
+                    alt={post.name} 
+                />
                 <p>{post.description}</p>
             </div>
       ))}

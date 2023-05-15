@@ -21,7 +21,7 @@ const reducer = (state, action) => {
 const PostsProvider = ({ children }) => {
   const [posts, setPosts] = useReducer(reducer, []);
 
-  useEffect(()=>{
+  useEffect(() => {
     fetch(`http://localhost:8080/posts`)
       .then(res => res.json())
       .then(data => setPosts({

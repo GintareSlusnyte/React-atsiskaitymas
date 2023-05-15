@@ -2,7 +2,6 @@ import { useState, useContext } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import UsersContext from "../../contexts/UsersContext";
-import { compareSync } from 'bcryptjs';
 
 const StyledMain = styled.main`
     height: 730px;
@@ -47,28 +46,28 @@ const Login = () => {
     const navigate = useNavigate();
 
     const inputHandler = (e) => {
+        console.log('Input changed:', e.target.name, e.target.value);
         setFormInputs({
-            ...formInputs,
-            [e.target.name]: e.target.value
+          ...formInputs,
+          [e.target.name]: e.target.value
         });
         setFailedLogIn(false);
-    };
+      };
 
-    const formSubmit = (e) => {
+      const formSubmit = (e) => {
         e.preventDefault();
         const loggedInUser = users.find(
-            (user) =>
-                user.email === formInputs.email &&
-                compareSync(formInputs.password, user.password)
+          (user) =>
+            user.email === formInputs.email && user.password === formInputs.password
         );
-
+      
         if (loggedInUser) {
-            setCurrentUser(loggedInUser);
-            navigate('/home');
+          setCurrentUser(loggedInUser);
+          navigate('/home');
         } else {
-            setFailedLogIn(true);
+          setFailedLogIn(true);
         }
-    };
+      };
 
     return (
         <StyledMain>
@@ -79,7 +78,8 @@ const Login = () => {
                     name="email"
                     id="email"
                     value={formInputs.email}
-                    onChange={inputHandler}
+                    required
+                    onChange={(e)=>{inputHandler(e)}}
                     placeholder="Email"
                 />
 
@@ -88,17 +88,24 @@ const Login = () => {
                     name="password"
                     id="password"
                     value={formInputs.password}
-                    onChange={inputHandler}
+                    required
+                    onChange={(e)=>{inputHandler(e)}}
                     placeholder="Password"
                 />
-
-                <NavLink to="/home">
-                    <input type="submit" value="Log In" />
-                </NavLink>
+                
+                    <NavLink to="/home">
+                        <input type="submit" value="Log In" />  
+                    </NavLink>
             </form>
-            {failedLogIn && (
-                <h1 style={{ color: 'red' }}>Neteisingi prisijungimo duomenys</h1>
-            )}
+
+                {
+                    failedLogIn &&
+                    <h1
+                      style={{ color:'red' }}
+                    >
+                      Neteisingi prisijungimo duomenys
+                    </h1>
+                  }
         </StyledMain>
     );
 };
