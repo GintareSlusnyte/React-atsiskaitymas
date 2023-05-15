@@ -4,6 +4,7 @@ import Footer from './components/Organisms/Footer';
 import Header from './components/Organisms/Header';
 import Register from './components/Pages/Register';
 import Login from './components/Pages/Login';
+import Home from './components/Pages/Home';
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <Header />
       <Routes>
         <Route index element={<Register />}/>
+        <Route path="/home" element={<Home />}/>
         <Route path="/login" element={<Login />}/>
       </Routes>
 
