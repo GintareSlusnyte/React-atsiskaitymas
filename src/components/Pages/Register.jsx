@@ -46,7 +46,7 @@ const Register = () => {
             .email('Laukelis privalomas'),
         password: Yup.string()
             .matches(
-                "^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,20}$",
+                "^(!?=.*[A-Z])(!?=.*[a-z])(!?=.*\d)(!?=.*[^A-Za-z0-9]).{8,20}$",
                 "Turi būti 8 simboliai, viena didžioji raidė, viena mažoji raidė, vienas skaičius ir vienas specialus simbolis"
             )
             .required('Laukelis privalomas'),

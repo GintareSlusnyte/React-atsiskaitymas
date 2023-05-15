@@ -1,0 +1,47 @@
+{
+    "users":[
+        {
+            "id": 1,
+            "userName": "Ross", 
+            "picture": "https://static.wikia.nocookie.net/friends/images/0/0b/RossGeller.jpg/revision/latest?cb=20180424154547",
+            "email": "ross.geller@gmail.com",
+            "password": "WeWere0nABreak!"
+        },{
+            "id": 2,
+            "userName": "Rachel", 
+            "picture": "https://media.vogue.fr/photos/5da46eeee189b20008ababeb/2:3/w_2560%2Cc_limit/GettyImages-908311.jpg",
+            "email": "rachel_green@gmail.com",
+            "password": "I_make_VERY_B4D_decisions"
+        },{
+            "id": 3,
+            "userName": "Chandler", 
+            "picture": "https://static.wikia.nocookie.net/friends/images/4/48/Chandler_Bing_portrait.jpg/revision/latest/scale-to-width/360?cb=20100601130820",
+            "email": "chandler-bing@gmail.com",
+            "password": "d3sp3rat3ForL0ve"
+        }        
+    ],
+    "posts":[
+        {
+            "id": 1,
+            "name": "Interior Design 90`s",
+            "image": "https://i.pinimg.com/236x/af/bd/8a/afbd8a10be480c589ab74d4d113693ef.jpg",
+            "description": "So '80s design is enjoying retro appreciation but the '90s hasn't been appreciated yet which is unfortunate because I was born in 1990 and wish to see old pictures of what things were hot back then. For now I'll be compiling all the artifact pictures into this board."
+        },{
+            "id": 2,
+            "name": "Interior Design Industrial",
+            "image": "https://i.pinimg.com/236x/7b/5e/4f/7b5e4f0a65ba5d8d34c91a7e8ab017ed.jpg",
+            "description": "Design of Living Rooms | Make Living Rooms | Living Room for Everyone | By @Homedecor048 home decor ideas | home decor | living room | home decor aesthetic..."
+        },{
+            "id": 3,
+            "name": "Interior Design Luxury",
+            "image": "https://i.pinimg.com/564x/06/35/da/0635dad4d0c0d63b4cdc9782bc3f07cb.jpg",
+            "description": "All of us want to have a unique luxury space to work and to receive guests, here you can get luxury ideas for your office."
+        },{
+            "id": 4,
+            "name": "Interior Design Luxury",
+            "image": "https://i.pinimg.com/564x/d8/0a/38/d80a386a31a69a1f8d8f6c9569b20de8.jpg",
+            "description": "'Cosy', or the American spelling 'Cozy', means to give a feeling of comfort, warmth, and relaxation. /r/CozyPlaces is an inclusive and positive..."
+        }
+    ]
+    
+}
