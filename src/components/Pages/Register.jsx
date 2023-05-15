@@ -4,7 +4,7 @@ import * as Yup from 'yup';
 import styled from "styled-components";
 
 const StyledMain = styled.main`
-  height: calc(100vh - 250px);
+  height: 730px;
 
   h1{
     text-align: center;
@@ -25,8 +25,12 @@ const StyledMain = styled.main`
     height: 23px;
     width: 230px;
   }
+  .btn{
+    display: flex;
+    gap: 20px;
+  }
   a > input{
-    background-color: #fbcc00;
+    background-color: #f8ec34;
     width: 100px;
     border-radius: 6px;
   }
@@ -111,8 +115,10 @@ const Register = () => {
                         style={{ color: 'red' }}
                     >{formik.errors.repeatPassword}</p>
                 }
-                <NavLink to="/home"><input type="submit" value="Registruotis"/></NavLink>
-                <NavLink to="/login"><input type="submit" value="Prisijungti"/></NavLink>
+                <div className="btn">
+                    <NavLink to="/home"><input type="submit" value="Registruotis"/></NavLink>
+                    <NavLink to="/login"><input type="submit" value="Prisijungti"/></NavLink>
+                </div>
             </form>
         </StyledMain>
      );

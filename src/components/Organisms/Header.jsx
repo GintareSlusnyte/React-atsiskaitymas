@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 const StyledHeader = styled.header`
+    padding: 0 50px;
     border-bottom: 2px solid black;
     >nav{
         display: flex;
@@ -11,6 +12,16 @@ const StyledHeader = styled.header`
     .logo > a > img{
         height: 90px;
     }
+    ul{
+        display: flex;
+        gap: 10px;
+        list-style-type: none;
+        >li > a{
+            text-decoration: none;
+            color: black;
+            font-weight: 600 ;
+        }
+    }
 
 `;
 
@@ -19,7 +30,7 @@ const Header = () => {
         <StyledHeader>
             <nav>
                 <div className="logo">
-                    <NavLink><img src="https://t4.ftcdn.net/jpg/03/59/58/21/360_F_359582124_yNqODaj57vwEazXSbmuK10z3qeOvThdI.jpg" alt="logo" /></NavLink>
+                    <NavLink><img src="https://img.freepik.com/premium-vector/design-logo-furniture_231093-63.jpg?w=360" alt="logo" /></NavLink>
                 </div>
                 <div>
                     <ul>
@@ -27,7 +38,7 @@ const Header = () => {
                         <li><NavLink to="/">Register</NavLink></li>
                         <li><NavLink to="/home">Home</NavLink></li>
                         <li><NavLink to="/add">Add</NavLink></li>
-                        <li><NavLink>Logout</NavLink></li>
+                        <li><NavLink to="/login">Logout</NavLink></li>
                     </ul>
                 </div>
             </nav>

@@ -5,7 +5,7 @@ import UsersContext from "../../contexts/UsersContext";
 import { compareSync } from 'bcryptjs';
 
 const StyledMain = styled.main`
-    height: 650px;
+    height: 730px;
 
     h1 {
         text-align: center;
@@ -30,7 +30,7 @@ const StyledMain = styled.main`
     }
 
     a > input {
-        background-color: #fbcc00;
+        background-color: #f8ec34;
         width: 100px;
         border-radius: 6px;
     }
@@ -72,6 +72,7 @@ const Login = () => {
 
     return (
         <StyledMain>
+            <h1>Prisijungti</h1>
             <form onSubmit={formSubmit}>
                 <input
                     type="text"

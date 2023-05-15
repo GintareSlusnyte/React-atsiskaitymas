@@ -5,19 +5,19 @@
             "userName": "Ross", 
             "picture": "https://static.wikia.nocookie.net/friends/images/0/0b/RossGeller.jpg/revision/latest?cb=20180424154547",
             "email": "ross.geller@gmail.com",
-            "password": "$2a$10$VbmV/4Nlqn76MvWAu3cyzeKsqLm1VZOPAtGQvG.iRj.qIJ3yq9812"
+            "password": "WeWere0nABreak!"
         },{
             "id": 2,
             "userName": "Rachel", 
             "picture": "https://media.vogue.fr/photos/5da46eeee189b20008ababeb/2:3/w_2560%2Cc_limit/GettyImages-908311.jpg",
             "email": "rachel_green@gmail.com",
-            "password": "$2a$10$aqXweWP7BzCaI4CHC2NaF.c.gJPDWUfAo2ZB6JvZZXzb1aBVE.VeG"
+            "password": "I_make_VERY_B4D_decisions"
         },{
             "id": 3,
             "userName": "Chandler", 
             "picture": "https://static.wikia.nocookie.net/friends/images/4/48/Chandler_Bing_portrait.jpg/revision/latest/scale-to-width/360?cb=20100601130820",
             "email": "chandler-bing@gmail.com",
-            "password": "$2a$10$58rXwGWDjFlHBcah.6Odu.4ZlZ283Gn9Rt.87WBI2y3ezhMNigLke"
+            "password": "d3sp3rat3ForL0ve"
         }        
     ],
     "posts":[
