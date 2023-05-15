@@ -18,6 +18,7 @@ const reducer = (state, action) =>{
 const UsersProvider = ({ children }) => {
 
     const [users, setUsers] = useReducer(reducer, []);
+    const [currentUser, setCurrentUser] = useState(null);
 
     useEffect(() => {
         fetch(`http://localhost:8080/users`)
@@ -33,7 +34,9 @@ const UsersProvider = ({ children }) => {
             value={{
                 users,
                 setUsers,
-                UsersActionTypes
+                UsersActionTypes,
+                currentUser,
+                setCurrentUser
             }}
         >
             { children }

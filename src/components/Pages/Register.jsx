@@ -43,7 +43,7 @@ const Register = () => {
     const validationSchema = Yup.object({
         email: Yup.string()
             .email('Privaloma nurodyti egzistuojantį email')
-            .email('Laukelis privalomas'),
+            .required('Laukelis privalomas'),
         password: Yup.string()
             .matches(
                 "^(!?=.*[A-Z])(!?=.*[a-z])(!?=.*\d)(!?=.*[^A-Za-z0-9]).{8,20}$",
@@ -112,6 +112,7 @@ const Register = () => {
                     >{formik.errors.repeatPassword}</p>
                 }
                 <NavLink to="/home"><input type="submit" value="Registruotis"/></NavLink>
+                <NavLink to="/login"><input type="submit" value="Prisijungti"/></NavLink>
             </form>
         </StyledMain>
      );
